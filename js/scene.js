@@ -6,3 +6,5 @@ let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 let renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
+
+let geometry = new THREE.BoxGeometry(1, 1, 1);

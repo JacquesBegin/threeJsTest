@@ -25,7 +25,7 @@ function animate() {
 
   cube.rotation.x += 0.01;
   cube.rotation.y += 0.01;
-  cube1.rotation.z += 0.01;
+  cube.rotation.z += 0.01;
   cube1.rotation.x -= 0.01;
   cube1.rotation.y -= 0.01;
   cube1.rotation.z -= 0.01;

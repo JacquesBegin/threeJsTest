@@ -11,13 +11,22 @@ let material = new THREE.MeshBasicMaterial({ color: 0x00aaff, wireframe: true })
 let cube = new THREE.Mesh(geometry, material);
 
 scene.add(cube);
-camera.position.z = 5;
+
+let geometry1 = new THREE.BoxGeometry(1, 1, 1);
+let material1 = new THREE.MeshBasicMaterial({ color: 0x00aaff, wireframe: true });
+let cube1 = new THREE.Mesh(geometry1, material1);
+
+scene.add(cube1);
+
+camera.position.z = 3;
 
 function animate() {
   requestAnimationFrame(animate);
 
   cube.rotation.x += 0.01;
   cube.rotation.y += 0.01;
+  cube1.rotation.x += 0.01;
+  cube1.rotation.y -= 0.01;
 
   renderer.render(scene, camera);
 }

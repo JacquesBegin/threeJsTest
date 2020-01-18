@@ -36,6 +36,7 @@ function animate() {
   renderer.render(scene, camera);
 }
 
+animate();
 },{"three":2}],2:[function(require,module,exports){
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :

@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JacquesBegin/threeJsTest/issues"
   },
-  "homepage": "https://github.com/JacquesBegin/threeJsTest#readme"
+  "homepage": "https://github.com/JacquesBegin/threeJsTest#readme",
+  "dependencies": {
+    "three": "^0.112.1"
+  }
 }

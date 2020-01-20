@@ -17,7 +17,7 @@ let cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
 const lightColor = 0xFFFFFF;
-
+const lightIntensity = 1;
 
 // let geometry1 = new THREE.BoxGeometry(1, 1, 1);
 // let material1 = new THREE.MeshBasicMaterial({ color: 0x00aaff, wireframe: true });

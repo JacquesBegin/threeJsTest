@@ -2,16 +2,28 @@
 let THREE = require("three");
 
 
+function create3DBox(geo, color, x) {
+  const geometry = new THREE.BoxGeometry(geo[0], geo[1], geo[2]);
+  const material = new THREE.MeshPhongMaterial({color});
+  const cube = new THREE.Mesh(geometry, material);
+  // scene.add(cube);
+  cube.position.x = x;
+  return cube;
+}
+
 const canvas = document.querySelector("#c");
 
+// Create scene and camera
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 3;
 
+// Create renderer
 let renderer = new THREE.WebGLRenderer({canvas: canvas});
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+// Create light source
 const lightColor = 0xFFFFFF;
 const lightIntensity = 1;
 const light = new THREE.DirectionalLight(lightColor, lightIntensity);
@@ -21,19 +33,20 @@ scene.add(light);
 let geometry = new THREE.BoxGeometry(1, 1, 1);
 let material = new THREE.MeshBasicMaterial({ color: 0x00aaff, wireframe: true });
 let cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-create3DBox(new THREE.BoxGeometry(1, 1, 1), "0xff00aa", 3);
+// scene.add(cube);
 
 let geometry1 = new THREE.BoxGeometry(1, 1, 1);
 let material1 = new THREE.MeshPhongMaterial({ color: 0x00aaff });
 let cube1 = new THREE.Mesh(geometry1, material1);
 scene.add(cube1);
 
+scene.add(create3DBox([1, 1, 1], "#ff00aa", 1.4));
 
 
 
 
+
+// Function to animate 3D objects.
 function animate() {
   requestAnimationFrame(animate);
 
@@ -49,13 +62,7 @@ function animate() {
 
 animate();
 
-function create3DBox(geometry, color, x) {
-  const material = new THREE.MeshPhongMaterial({color: color});
-  const cube = new THREE.Mesh(geometry, material);
-  scene.add(cube);
-  cube.position.x = x;
-  return cube;
-}
+
 },{"three":2}],2:[function(require,module,exports){
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :

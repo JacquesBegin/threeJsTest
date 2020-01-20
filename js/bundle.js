@@ -43,6 +43,10 @@ function animate() {
 }
 
 animate();
+
+function create3DBox(geometry, color, x) {
+
+}
 },{"three":2}],2:[function(require,module,exports){
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :

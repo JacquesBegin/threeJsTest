@@ -42,3 +42,7 @@ function animate() {
 }
 
 animate();
+
+function create3DBox(geometry, color, x) {
+
+}

@@ -44,5 +44,9 @@ function animate() {
 animate();
 
 function create3DBox(geometry, color, x) {
-
+  const material = new THREE.MeshPhongMaterial({color: color});
+  const cube = new THREE.Mesh(geometry, material);
+  scene.add(cube);
+  cube.position.x = x;
+  return cube;
 }

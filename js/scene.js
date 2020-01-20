@@ -16,7 +16,7 @@ let material = new THREE.MeshBasicMaterial({ color: 0x00aaff, wireframe: true })
 let cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 let geometry1 = new THREE.BoxGeometry(1, 1, 1);
-let material1 = new THREE.MeshBasicMaterial({ color: 0x00aaff });
+let material1 = new THREE.MeshPhongMaterial({ color: 0x00aaff });
 let cube1 = new THREE.Mesh(geometry1, material1);
 scene.add(cube1);
 

@@ -65,10 +65,11 @@ function animate() {
   cube2.rotation.z -= 0.01;
 
   cubes.forEach((cube) => {
-    const rotX = Math.random() - 1;
-    const rotY = Math.random() - 1;
-    cube.rotation.x = rotX;
-    cube.rotation.y = rotY;
+    const rotX = Math.random() / 100 + 0.01;
+    const rotY = Math.random() / 100 + 0.01;
+    console.log(rotX);
+    cube.rotation.x += rotX;
+    cube.rotation.y += rotY;
   });
 
   renderer.render(scene, camera);

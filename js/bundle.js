@@ -65,7 +65,9 @@ function animate() {
   cube2.rotation.z -= 0.01;
 
   cubes.forEach((cube) => {
-    const speed = 1 + Math.random();
+    const rotX = 1 + Math.random();
+    const rotY = 1 + Math.random();
+    
   });
 
   renderer.render(scene, camera);

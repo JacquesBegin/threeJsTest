@@ -64,8 +64,8 @@ function animate() {
   cube2.rotation.z -= 0.01;
 
   cubes.forEach((cube) => {
-    const rotX = 1 + Math.random();
-    const rotY = 1 + Math.random();
+    const rotX = Math.random() - 1;
+    const rotY = Math.random() - 1;
     cube.rotation.x = rotX;
     cube.rotation.y = rotY;
   });

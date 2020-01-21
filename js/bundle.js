@@ -68,6 +68,7 @@ function animate() {
     const rotX = 1 + Math.random();
     const rotY = 1 + Math.random();
     cube.rotation.x = rotX;
+    cube.rotation.y = rotY;
   });
 
   renderer.render(scene, camera);

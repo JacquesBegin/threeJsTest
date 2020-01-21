@@ -43,7 +43,7 @@ scene.add(cube1);
 
 scene.add(create3DBox([1, 1, 1], "#ff00aa", 1.4, 1));
 scene.add(create3DBox([0.4, 0.4, 0.4], "#aaff00", -1.4));
-scene.add(create3DBox([0.7, 0.7, 0.7], "#333333", -2));
+scene.add(create3DBox([0.7, 0.7, 0.7], "#333333", -0.8, -1));
 
 
 

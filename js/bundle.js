@@ -2,12 +2,13 @@
 let THREE = require("three");
 
 
-function create3DBox(geo, color, x) {
+function create3DBox(geo, color, x, y) {
   const geometry = new THREE.BoxGeometry(geo[0], geo[1], geo[2]);
   const material = new THREE.MeshPhongMaterial({color});
   const cube = new THREE.Mesh(geometry, material);
   // scene.add(cube);
   cube.position.x = x;
+  if (y) cube.position.y = y;
   return cube;
 }
 
@@ -40,7 +41,9 @@ let material1 = new THREE.MeshPhongMaterial({ color: 0x00aaff });
 let cube1 = new THREE.Mesh(geometry1, material1);
 scene.add(cube1);
 
-scene.add(create3DBox([1, 1, 1], "#ff00aa", 1.4));
+scene.add(create3DBox([1, 1, 1], "#ff00aa", 1.4, 1));
+scene.add(create3DBox([0.4, 0.4, 0.4], "#aaff00", -1.4));
+scene.add(create3DBox([0.7, 0.7, 0.7], "#333333", -2));
 
 
 

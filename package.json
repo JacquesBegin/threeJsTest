@@ -19,6 +19,6 @@
   "homepage": "https://github.com/JacquesBegin/threeJsTest#readme",
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "three": "^0.112.1"
+    "three": "^0.137.0"
   }
 }
